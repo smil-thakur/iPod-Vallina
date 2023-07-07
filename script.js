@@ -55,11 +55,46 @@ menuItems.forEach((item, index) => {
 
 })
 
-wheel.addEventListener("touchstart mousedown", mouseDown)
+wheel.addEventListener(["mousedown"], mouseDown)
 
-wheel.addEventListener("touchend mouseup", mouseUp)
+wheel.addEventListener("touchmove", touchStart)
 
-wheel.addEventListener("touchmove mousemouse", mouseMove)
+function touchStart(event) {
+
+    const rect = wheel.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    const deltaX = event.touches[0].clientX - centerX;
+    const deltaY = event.touches[0].clientY - centerY;
+    let angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI)
+
+    if (angle < 0) {
+        angle += 360;
+    }
+
+    console.log(angle)
+
+    if (Math.abs(oldAngle - angle) >= 20) {
+
+        changeIDX(oldAngle, angle);
+
+        oldAngle = angle
+
+    }
+
+}
+
+wheel.addEventListener(["mouseup"], mouseUp)
+
+wheel.addEventListener("touchend", touchEnd)
+
+function touchEnd() {
+    currentAngle = 0;
+    newAngle = 0;
+    oldAngle = 0;
+}
+
+wheel.addEventListener(["mousemove"], mouseMove)
 
 wheel.addEventListener("click", wheelClick)
 
