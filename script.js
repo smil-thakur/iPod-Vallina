@@ -55,11 +55,11 @@ menuItems.forEach((item, index) => {
 
 })
 
-wheel.addEventListener("mousedown", mouseDown)
+wheel.addEventListener("touchstart mousedown", mouseDown)
 
-wheel.addEventListener("mouseup", mouseUp)
+wheel.addEventListener("touchend mouseup", mouseUp)
 
-wheel.addEventListener("mousemove", mouseMove)
+wheel.addEventListener("touchmove mousemouse", mouseMove)
 
 wheel.addEventListener("click", wheelClick)
 
