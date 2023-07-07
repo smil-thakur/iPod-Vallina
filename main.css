@@ -1,0 +1,121 @@
+body{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.ipodBody{
+
+    display: flex;
+    justify-content: center;
+    width: 370px;
+    height: 600px;
+    border-radius: 20px;
+    background-color: black;
+
+
+}
+
+.mainDisplay{
+
+    
+    position: absolute;
+    top: 135px;
+    width: 310px;
+    height: 250px;
+    background-color: white;
+
+}
+
+ul{
+    padding: 10px;
+
+}
+
+li{
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+.musicScreen{
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    display:none ;
+
+}
+
+.sleepDisplay{
+
+    background-color: grey;
+
+}
+
+.selectedMusic{
+
+    padding: 2px;
+
+}
+
+.musicTile{
+
+
+    border-radius: 5px;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.musicAlbum{
+
+    border-radius: 5px;
+    width: 40px;
+
+}
+
+.titleBar{
+
+    padding: 2px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.selectedItem{
+
+    border-radius: 5px;
+    padding: 2px 0px 2px 5px;
+    width: 100%;
+    background-color: #007AFF;
+    color: white;
+
+}
+
+.notSelectedItem{
+    padding: 2px 0px 2px 5px;
+    color: black;
+}
+
+.clickWheel{
+
+
+    position: absolute;
+    width: 210px;
+    height: 210px;
+    background-image: url("assets/wheel.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 450px;
+    border-radius: 100%;
+    
+
+
+}
